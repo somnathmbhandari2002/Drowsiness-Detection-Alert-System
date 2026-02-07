@@ -4,14 +4,14 @@ import time
 import pyttsx3
 import numpy as np
 
-# Initialize Mediapipe Face Mesh
+# Initialize Mediapipe Face Mesh.
 mp_face_mesh = mp.solutions.face_mesh
 face_mesh = mp_face_mesh.FaceMesh(min_detection_confidence=0.5, min_tracking_confidence=0.5)
 
-# Initialize text-to-speech engine
+# Initialize text-to-speech engine.
 engine = pyttsx3.init()
 
-# Function to calculate Eye Aspect Ratio (EAR)
+# Function to calculate Eye Aspect Ratio (EAR).
 def eye_aspect_ratio(landmarks, eye_points):
     A = np.linalg.norm(np.array(landmarks[eye_points[1]]) - np.array(landmarks[eye_points[5]]))
     B = np.linalg.norm(np.array(landmarks[eye_points[2]]) - np.array(landmarks[eye_points[4]]))
