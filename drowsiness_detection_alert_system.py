@@ -19,12 +19,12 @@ def eye_aspect_ratio(landmarks, eye_points):
     ear = (A + B) / (2.0 * C)
     return ear
 
-# Eye landmark indices from Mediapipe
+# Eye landmark indices from Mediapipe.
 LEFT_EYE = [33, 160, 158, 133, 153, 144]  # Left eye landmarks
 RIGHT_EYE = [362, 385, 387, 263, 373, 380]  # Right eye landmarks
 
-# Thresholds
-EAR_THRESHOLD = 0.25  # Eye closed threshold
+# Thresholds.
+EAR_THRESHOLD = 0.25  # Eye closed threshold.
 CLOSED_TIME_THRESHOLD = 3  # Time in seconds
 
 # Capture video
